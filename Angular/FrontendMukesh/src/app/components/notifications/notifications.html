@@ -1,0 +1,8 @@
+<h2>Notifications</h2>
+<ul>
+  <li *ngFor="let note of notifications">
+    {{ note.message }} - {{ note.isRead ? 'Read' : 'Unread' }}
+    <button *ngIf="!note.isRead" (click)="markAsRead(note.notificationId)">Mark Read</button>
+  </li>
+</ul>
+
